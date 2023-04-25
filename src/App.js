@@ -76,16 +76,12 @@ function App() {
       anchor_top: false,
       anchor_bottom: false,
 
-      // setup: this.setupEditor,
+      paste_webkit_styles: 'color font-family font-size font-weight background-color',
+      paste_data_images: false,
       setup: (editor) => {
         editorRef.current = editor
         msWordPastePlugin(editor);
-        editor.ui.registry.addToggleButton('myCustomToolbarButton', {
-          text: 'myCustomToolbarButton',
-          tooltip: 'eblan'
-        });
       },
-      powerpaste_word_import: 'merge',
     }
   }
 
